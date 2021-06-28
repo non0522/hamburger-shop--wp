@@ -1,0 +1,31 @@
+.p-heading {
+    & * {
+        padding-bottom: 30px;
+        @include tab {
+            padding-bottom: 60px;
+        }
+    }
+    & h6 {
+        padding-bottom: 0;
+    }
+
+
+    & h2 {
+        font-size: 1.75rem;
+        color: $color-brown-dark;
+        @include tab {
+            font-size: 2.25rem;
+        }
+    }
+    & h3 {
+        font-size: 1.5rem;
+        color: $color-brown-dark;
+        @include tab {
+            font-size: 1.75rem;
+        }
+    }
+    & h4, & h5, & h6 {
+        font-size: 20px;
+        color: $color-brown-dark;
+    }
+}

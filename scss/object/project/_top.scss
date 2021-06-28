@@ -1,0 +1,62 @@
+.p-top {
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    width: calc(100% + 40px);
+    position: relative;
+    left: -20px;
+    @include tab {
+        width: calc(100% + 80px);
+        left: -40px;
+    }
+    @include pc {
+        width: calc(100% + 120px);
+        left: -60px;
+    }
+    &__title {
+        color: $color-white-font;
+        padding-left: 1.5rem;
+        @include tab {
+            font-size: 3.75rem;
+        }
+    }
+    &__sub-title {
+        color: $color-white-font;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+    }
+    &__bg {
+        background-color: rgba(0,0,0,0.3);
+        width: calc(100% + 40px);
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include tab {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
+
+// 各ページの写真等変更
+.p-top {
+    &--index {
+        background-image: url(/images/index/p-top_bg01.png);
+    }
+    &--archive {
+        background-image: url(/images/archive/p-top_bg01.png);
+    }
+    &--search {
+        background-image: url(/images/archive/p-top_bg01.png);
+    }
+    &--single {
+        background-image: url(/images/single/p-top_bg01.png);
+    }
+    &--page {
+        background-image: url(/images/page/p-top_bg01.png);
+    }
+}

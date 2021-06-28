@@ -1,0 +1,46 @@
+// .u-mb-s margin-bottom: 20px /  / ;
+// .u-mb-m margin-bottom: 30px /  / ;
+// .u-mb-m margin-bottom: 30px /  / ;
+// .u-mb-ex margin-bottom: 50px /  / ;
+// .u-mtb-s margin: 20px 0 /;
+
+
+
+.u-mb-s > * {
+    margin-bottom: 20px;
+    @include tab {
+        // margin-bottom: 30px;
+    }
+    @include tab {
+        margin-bottom: 70px;
+    }
+}
+.u-mb-s .p-map {
+    margin-bottom: 0;
+}
+.u-mb-m > * {
+    margin-bottom: 30px;
+    @include tab {
+        margin-bottom: 60px;
+    }
+    @include pc {
+        margin-bottom: 60px;
+    }
+}
+
+
+// archive.html .c-button--detail
+.u-mtb-s {
+    margin: 20px auto;
+    @include pc {
+        margin: 10% auto;
+    }
+} 
+
+// index.html .p-service
+.u-mb-ex.p-service-wrapper {
+    margin-bottom: 50px;
+    @include tab {
+        margin-bottom: 20px;
+    }
+}

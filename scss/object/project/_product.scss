@@ -1,0 +1,36 @@
+.p-product {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &__img {
+            object-fit: cover;
+            height: 100%;
+            width: 44%;
+        }
+        &__text {
+            width: 54%;
+            overflow: hidden;
+            max-height: 21vh;
+            @include tab {
+                max-height: none;
+
+            }
+        }
+
+    }
+    & .p-product__subvisual {
+        padding: 0 35px 0 35px;
+        margin-bottom: 0;
+        @include tab {
+            padding: 0 15% 20vh 15%;
+        }
+    }
+}
+.p-product figure:nth-of-type(2) figcaption {
+    order: -1;
+}

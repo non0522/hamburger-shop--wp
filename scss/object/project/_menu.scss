@@ -1,0 +1,22 @@
+.p-menu__desc {
+    width: 100%;
+    &__title {
+        padding-bottom: 30px;
+        font-size: 1.75rem;
+        color: $color-brown-dark;
+        @include tab {
+            font-size: 2.25rem;
+        }
+    }
+}// /.p-menu__desc
+
+.p-menu__list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+    @include tab {
+        gap: 30px;
+        padding-bottom: 80px;
+    }
+}// ./.p-menu__list

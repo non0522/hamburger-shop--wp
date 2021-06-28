@@ -1,0 +1,10 @@
+ .l-main {
+     background-color: $color-white-bg;
+     padding: 0 20px;
+     @include tab {
+         padding: 0 40px;
+    }
+     @include pc {
+         padding: 0 60px;
+    }
+ }

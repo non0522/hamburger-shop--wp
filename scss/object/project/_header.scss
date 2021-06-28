@@ -1,0 +1,38 @@
+.p-header {
+    padding: 40px 24px;
+    background-color: $color-beige-white;
+    align-items: center;
+    @include tab {
+        padding: 40px 140px;
+    }
+    @include pc {
+        padding: 40px 120px 40px 60px;
+    }// /.p-header
+
+    &__title {
+        font-size: 40px;
+        padding-bottom: 40px;
+        @include pc {
+            font-size: 64px;
+            padding-bottom: 0;
+        }
+    }   
+
+    &__search {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include pc {
+            max-width: 35%;
+        }
+        &__box {
+            flex-grow: 2;
+            margin-right: 1rem;
+            padding-left: 1rem;
+            background-color: $color-white-bg;
+            border: $color-gray 1px solid;
+            border-radius: 8px;
+            font-family: FontAwesome;
+        }
+    }// /.p-headder__search
+}

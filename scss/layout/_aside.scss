@@ -1,0 +1,10 @@
+.l-aside {
+    height: 100%;
+    width: 100%;
+}
+
+.l-container.is-open .l-aside {
+    position:fixed;
+    top: 0;
+    overflow-y: scroll;
+}

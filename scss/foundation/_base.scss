@@ -1,0 +1,50 @@
+// GENERAL STYLING
+// ================================================
+html {
+  font-size: 100%;
+  width: 100%;
+  height: 100%;
+  font-family: 'mplus-1m', 'Roboto', sans-serif;
+  margin: auto;
+  color: $color-gray;
+}
+
+body {
+  width: 100%;
+  margin:0;
+  padding:0;
+}
+h1 {
+  color: $color-gray;
+}
+h2 {
+  font-size: 2.25rem;
+  @include pc {
+    font-size: 2.5rem;
+  }
+}
+h3 {
+  font-size: 2.5rem;
+}
+p {
+  color: $color-brown-dark;
+}
+
+a {
+  text-decoration: none;
+  color: $color-gray;
+}
+
+li {
+  list-style: none;
+}
+
+// COMMON
+// ================================================ 
+p {
+  line-height: 1.7;
+}
+img {
+  width: 100%;
+  height: auto;
+}

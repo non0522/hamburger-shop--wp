@@ -1,0 +1,83 @@
+// Various lines
+.c-pseudo-element {
+   &--short::after {
+      content:"";
+      display:block;
+      width: 2rem;
+      height: 4px;
+      background-color: $color-white-font;
+      margin-top: 1.2rem;
+      @include tab {
+         width: 3rem;
+      }
+      @include pc {
+         width: 4rem;
+      }
+   }   
+   &--long::after {
+      @extend .c-pseudo-element--short::after;
+      width: 5.5rem;
+      height: 2px;
+      margin: 1.5rem 0;
+      @include pc {
+         margin: 2rem 0;
+      }
+   }
+   &--vertical::after{
+      @extend .c-pseudo-element--short::after;
+      width: 2px;
+      height: 20px;
+      margin: 5px 16px 0 16px;
+   }
+}
+// takeout下の線を解除
+.p-service__takeout .c-pseudo-element--short::after {
+      display: none;
+      @include tab {
+         display: block;
+      }
+} 
+
+// pagenation
+.c-pseudo-element-arrow {
+   &--left {
+      position: relative;
+      display: inline-block;
+      padding-left: 6px;
+      color: #333;
+      text-decoration: none;
+      &::before {
+         content: '';
+         width: 12px;
+         height: 12px;
+         border: 0;
+         position: absolute;
+         top: 50%;
+         margin-top: -5px;
+         transform: rotate(45deg);
+         left: -14px;
+         border-bottom: solid 1px $color-gray;
+         border-left: solid 1px $color-gray;
+      }
+   }
+   &--right {
+      @extend .c-pseudo-element-arrow--left;
+      &::before {
+         content: '';
+         width: 12px;
+         height: 12px;
+         border: 0;
+         position: absolute;
+         top: 50%;
+         margin-top: -5px;
+         transform: rotate(45deg);
+         left: 1px;
+         border-top: solid 1px $color-gray;
+         border-right: solid 1px $color-gray;
+         border-bottom: none;
+         border-left: none;
+      }
+   }
+}
+ 
+

@@ -1,0 +1,30 @@
+.l-container.is-open {
+    width: 100%;
+    position: fixed;
+}
+
+.l-container {
+    @include pc {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: 220px 1fr 150px;
+        gap: 0px 0px;
+        grid-template-areas:
+        "header aside"
+        "main aside"
+        "footer footer";
+
+        .l-header { 
+            grid-area: header; 
+        }
+        .l-main { 
+            grid-area: main; 
+        }
+        .l-aside { 
+            grid-area: aside; 
+        }
+        .l-footer { 
+            grid-area: footer; 
+        }
+    }
+}

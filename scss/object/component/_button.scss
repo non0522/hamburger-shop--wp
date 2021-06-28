@@ -1,0 +1,80 @@
+.c-button--search {
+  background: linear-gradient(to bottom, $color-beige, $color-beige-dark);
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: rgba(112, 112, 112, 0.4) 1px solid;
+  font-family: 'mplus-1m-bold';
+}// /.c-button--search
+
+.c-button--jq__menu {
+    font-size: 20px;
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    z-index: 99;
+    @include tab {
+        font-size: 34px;
+        top: 18px;
+        right: 26px;
+    }
+    @include pc {
+      display: none;
+    }
+    .l-container.is-open & {
+      display: none;
+    }
+  }
+
+.c-button--jq__close {
+  display: none;
+  width: 50px;
+  height: 7px;
+  background-color: $color-gray;
+  position: absolute;
+  top: 34px;
+  right: 16px;
+  z-index: 99;
+  transform: rotate(45deg);
+
+  .l-container.is-open & {
+    display: block;
+  }
+  
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: $color-gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+}
+
+
+.c-button--detail {
+  width: 60%;
+  display: block;
+  background-color: $color-white-bg;
+  color: $color-brown-dark;
+  border-radius: 30px;
+  padding: 10px 10px;
+  text-align: center;
+  @include pc {
+    padding: 20px 0;
+    border-radius: 50px;
+  }
+}
+
+.c-button {
+  background: linear-gradient(to bottom, $color-beige, $color-beige-dark);
+  border-radius: 10px;
+  padding: 12px 24px;
+  border: rgba(112, 112, 112, 0.4) 1px solid;
+  font-family: 'mplus-1m-bold';
+  width: 100%;
+  @include tab {
+    width: 60%;
+  }
+}

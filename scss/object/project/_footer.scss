@@ -1,0 +1,23 @@
+.p-footer {
+    background-color: rgba( 157, 134, 112, 0.2);
+    background-image: url(/images/index/p-footer_layer01.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: $color-white-font;
+    text-align: center;
+
+    &__about {
+        display: flex;
+        justify-content: center;
+        & a {
+            color: $color-white-font;
+            font-size: 20px;
+        }
+        padding-top: 40px;
+    }
+    
+    &__copyright {
+        color: $color-white-font;
+        padding: 30px;
+    }
+}
