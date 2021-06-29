@@ -7,17 +7,20 @@
             <nav class="p-gnav">
                 <article class="p-gnav__contents">
                     <p class="p-gnav__contents__subject">Menu</p>
-                    <h2 class="p-gnav__contents__title"><a href="#archive">バーガー</a></h2>
-                    <ul class="p-gnav__contents__list">
-                        <li class="p-gnav__contents__list__item"><a href="#menu">ハンバーガー</a></li>
-                        <li class="p-gnav__contents__list__item"><a href="#menu">チーズバーガー</a></li>
-                        <li class="p-gnav__contents__list__item"><a href="#menu">テリヤキバーガー</a></li>
-                        <li class="p-gnav__contents__list__item"><a href="#menu">フィッシュバーガー</a></li>
-                        <li class="p-gnav__contents__list__item"><a href="#menu">ベーコンバーガー</a></li>
-                        <li class="p-gnav__contents__list__item"><a href="#menu">チキンバーガー</a></li>
-                    </ul>
+                    <?php wp_nav_menu( array(
+                        // 'menu_class'      => 'menu',
+                        'container_class' => 'p-gnav__contents__wrapper',
+                        'theme_location' => 'global_nav' 
+                    )); ?>
                 </article>
-                <article class="p-gnav__contents">    
+
+            </nav>
+        </aside><!-- /.aside -->
+
+
+
+
+                <!-- <article class="p-gnav__contents">    
                     <h2 class="p-gnav__contents__title"><a href="#archive">サイド</a></h2>
                     <ul class="p-gnav__contents__list">
                         <li class="p-gnav__contents__list__item"><a href="#menu">ポテト</a></li>
@@ -37,6 +40,4 @@
                         <li class="p-gnav__contents__list__item"><a href="#menu">コーヒー（Ice/Hot）</a></li>
                     </ul>
                     <button class="c-shout-button"></button>
-                </article>
-            </nav>
-        </aside><!-- /.aside -->
+                </article> -->

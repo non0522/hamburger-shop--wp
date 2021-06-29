@@ -45,18 +45,18 @@
 // 各ページの写真等変更
 .p-top {
     &--index {
-        background-image: url(/images/index/p-top_bg01.png);
+        background-image: url(../images/index/p-top_bg01.png);
     }
     &--archive {
-        background-image: url(/images/archive/p-top_bg01.png);
+        background-image: url(../images/archive/p-top_bg01.png);
     }
     &--search {
-        background-image: url(/images/archive/p-top_bg01.png);
+        background-image: url(../images/archive/p-top_bg01.png);
     }
     &--single {
-        background-image: url(/images/single/p-top_bg01.png);
+        background-image: url(../images/single/p-top_bg01.png);
     }
     &--page {
-        background-image: url(/images/page/p-top_bg01.png);
+        background-image: url(../images/page/p-top_bg01.png);
     }
 }

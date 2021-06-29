@@ -2,7 +2,7 @@
 
         <main class="l-main u-mb-s">
             <section class="p-top p-top--index">
-                <h2 class="p-top__title">ダミーサイト</h2>
+                <h2 class="p-top__title"><?php bloginfo( 'description' ); ?></h2>
             </section><!-- /.p-top -->
             
             <section class="p-service-wrapper u-mb-ex">

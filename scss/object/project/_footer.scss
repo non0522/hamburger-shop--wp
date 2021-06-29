@@ -1,19 +1,22 @@
 .p-footer {
     background-color: rgba( 157, 134, 112, 0.2);
-    background-image: url(/images/index/p-footer_layer01.png);
+    background-image: url(../images/index/p-footer_layer01.png);
     background-blend-mode: multiply;
     background-size: cover;
     color: $color-white-font;
     text-align: center;
 
     &__about {
-        display: flex;
-        justify-content: center;
         & a {
+            padding-right: 20px;
             color: $color-white-font;
             font-size: 20px;
         }
-        padding-top: 40px;
+        & .menu {
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
     }
     
     &__copyright {
