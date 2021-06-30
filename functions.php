@@ -11,6 +11,11 @@
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
         add_theme_support('automatic-feed-links');
+        register_nav_menus( array(
+            'global_nav' => esc_html__('global navigation','rhamburger'),
+            'sub_nav' => esc_html__('sub navigation','rhamburger'),
+            'footer_nav' => esc_html__('footer navigation','rhamburger'),
+        ));
     }
     add_action('after_setup_theme', 'custom_theme_support');
 
@@ -27,7 +32,7 @@
         wp_enqueue_style( 'rhamburger', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' );
         wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
         wp_enqueue_script( 'jquery',  get_template_directory_uri() . '/jquery/jquery-3.6.0.min.js', array(), '3.6.0', true );
-        wp_enqueue_script( 'samplejs', get_template_directory_uri() . '/jquery/style.js', array(), '1.0.0', true );
+        wp_enqueue_script( '；stylejs', get_template_directory_uri() . '/jquery/style.js', array(), '1.0.0', true );
     }
     add_action( 'wp_enqueue_scripts', 'rhamburger_script' );
 
@@ -43,8 +48,3 @@
     add_filter( 'pre_get_document_title', 'rhamburger_title' );
 
 
-    register_nav_menus( array(
-        'global_nav' => esc_html__('global navigation','rhamburger'),
-        'sub_nav' => esc_html__('sub navigation','rhamburger'),
-        'footer_nav' => esc_html__('footer navigation','rhamburger'),
-    ));
