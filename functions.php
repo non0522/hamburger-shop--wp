@@ -48,3 +48,24 @@
     add_filter( 'pre_get_document_title', 'rhamburger_title' );
 
 
+    function category_form_fields_function($tag){
+        $cat_id = $tag->term_id;
+        $meta = get_term_meta($cat_id);
+        echo '<tr class="form-field">
+                <th>
+                    <label for="extra_text">サブタイトル</label>
+                </th>
+                <td>
+                    <input type="text" name="category_subtitle" id="category_subtitle" size="25" value="'.esc_html($meta['category_subtitle'][0]).'" />
+                </td>
+            </tr>';
+    };
+    add_action('category_add_form_fields','category_form_fields_function');
+    add_action('category_edit_form_fields','category_form_fields_function');
+
+    function save_category(){
+        update_term_meta($_POST['tag_ID'],'category_subtitle', $_POST['category_subtitle']);
+    };
+    add_action ( 'edited_term', 'save_category');
+
+

@@ -275,18 +275,16 @@ img {
   }
 }
 
-.c-card__img {
-  height: 40%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 @media (min-width: 600px) {
   .c-card__img {
-    height: auto;
     width: 50%;
   }
+}
+
+.c-card__img > img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .c-card__content {
@@ -337,7 +335,7 @@ img {
   }
 }
 
-.c-card__content__text {
+.c-card__content > p {
   color: #FFFFFF;
 }
 

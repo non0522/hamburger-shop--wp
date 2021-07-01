@@ -4,43 +4,46 @@
             <section class="p-top p-top--archive">
                 <div class="p-top__bg">
                     <h2 class="p-top__title">Menu:</h2>
-                    <p class="p-top__sub-title">チーズバーガー</p>
+                    <p class="p-top__sub-title"><?php echo esc_html( single_term_title( '', false ) ); ?></p>
                 </div>
             </section><!-- /.p-top -->
 
             <section class="p-menu u-mb-s">
                 <article class="p-menu__desc">
-                    <h2 class="p-menu__desc__title">小見出しが入ります</h2>
-                    <p class="p-menu__desc__lead">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <h2 class="p-menu__desc__title"><?php echo save_category(); ?></h2>
+                    <p class="p-menu__desc__lead"><?php echo category_description(); ?></p>
                 </article>
                 <section class="p-menu__list">
+                <?php
+				if( have_posts() ) :
+					while( have_posts() ) :
+						the_post(); ?>
                     <figure class="p-menu__list__items c-card">
-                        <img class="c-card__img" src="/images/archive/p-menu_img01.png" alt="">
+                        <div class="c-card__img">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail(); ?>
+                            <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/noimage.png" width="100" height="100"alt="">
+                        <?php endif; ?>
+                        </div>
                         <figcaption class="c-card__content">
-                            <h2 class="c-card__content__title">チーズバーガー</h2>
-                            <h3 class="c-card__content__subtitle">小見出しが入ります</h3>
-                            <p class="c-card__content__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <a href="#" class="c-button--detail u-mtb-s">詳しく見る</a>
+                            <h2 class="c-card__content__title"><?php the_title();?></h2>
+                            <!-- <p class="c-card__content__subtitle"></p> -->
+                            <p class="c-card__content__text"><?php the_excerpt(); ?></p>
+                            <a href="<?php the_permalink(); ?>" class="c-button--detail u-mtb-s">詳しく見る</a>
                         </figcaption>
                     </figure>
-                    <figure class="p-menu__list__items c-card">
-                        <img class="c-card__img" src="/images/archive/p-menu_img01.png" alt="">
-                        <figcaption class="c-card__content">
-                            <h2 class="c-card__content__title">ダブルチーズバーガー</h2>
-                            <h3 class="c-card__content__subtitle">小見出しが入ります</h3>
-                            <p class="c-card__content__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <a href="#" class="c-button--detail u-mtb-s">詳しく見る</a>
-                        </figcaption>
-                    </figure>
-                    <figure class="p-menu__list__items c-card">
-                        <img class="c-card__img" src="/images/archive/p-menu_img01.png" alt="">
-                        <figcaption class="c-card__content">
-                            <h2 class="c-card__content__title">スペシャルチーズバーガー</h2>
-                            <h3 class="c-card__content__subtitle">小見出しが入ります</h3>
-                            <p class="c-card__content__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <a href="#" class="c-button--detail u-mtb-s">詳しく見る</a>
-                        </figcaption>
-                    </figure>
+                    <?php
+                endwhile;
+            else:
+            ?>
+
+            <p>記事はありません</p>
+
+            <?php
+            endif;
+            ?>
+
                 </section><!-- /.p-menu__list -->
 
                 <section class="p-menu__pagination">

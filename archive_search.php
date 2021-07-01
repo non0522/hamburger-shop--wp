@@ -4,7 +4,7 @@
             <section class="p-top p-top--search">
                 <div class="p-top__bg">
                     <h2 class="p-top__title">Search:</h2>
-                    <p class="p-top__sub-title">チーズバーガー</p>
+                    <p class="p-top__sub-title"><?php echo esc_html( single_term_title( '', false ) ); ?></p>
                 </div>
             </section><!-- /.p-top -->
 
