@@ -8,11 +8,16 @@
             <section class="p-service-wrapper u-mb-ex">
                 <ul class="p-service">
                     <li class="p-service__cat p-service__takeout">
-                        <a class="p-service__cat__link" href="#page">
-                            <h3 class="p-service__cat__title c-pseudo-element--short">Take Out</h3>
+                        <?php
+                            $category_id = get_cat_ID( 'Take Out' );
+                            $category_link = get_category_link( $category_id );
+                        ?>
+                        <a class="p-service__cat__link" href="<?php echo esc_url( $category_link ); ?>">
+                        <!-- <a class="p-service__cat__link" href="/category/takeout/"> こっちの書き方でもリンクできた-->
+                            <h3 class="p-service__cat__title c-pseudo-element--short"><?php echo get_cat_name(6);?></h3>
                             <ul class="p-service__cat__sort">
                                 <li class="p-service__cat__sort__inner">
-                                    <h4>Take Out</h4>
+                                    <h4><?php echo get_cat_name(6);?></h4>
                                     <p>当店のテイクアウトで利用できる商品を掲載しています</p>
                                 </li>
                                 <li class="p-service__cat__sort__inner">
@@ -23,11 +28,15 @@
                         </a>
                     </li>
                     <li class="p-service__cat p-service__eatin">
-                        <a class="p-service__cat__link" href="#page">
-                            <h3 class="p-service__cat__title c-pseudo-element--short">Eat In</h3>
+                        <?php
+                            $category_id = get_cat_ID( 'Eat In' );
+                            $category_link = get_category_link( $category_id );
+                        ?>
+                        <a class="p-service__cat__link" href="<?php echo esc_url( $category_link ); ?>">
+                            <h3 class="p-service__cat__title c-pseudo-element--short"><?php echo get_cat_name(5);?></h3>
                             <ul class="p-service__cat__sort">
                                 <li class="p-service__cat__sort__inner">
-                                    <h4>Eat In</h4>
+                                    <h4><?php echo get_cat_name(5);?></h4>
                                     <p>当店のイートインで利用できる商品を掲載しています</p>
                                 </li>
                                 <li class="p-service__cat__sort__inner">

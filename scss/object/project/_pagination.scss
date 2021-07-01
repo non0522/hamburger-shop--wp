@@ -1,54 +1,70 @@
+.p-pagenation {
+    align-items: center;
+    @include tab {
+    }
+}
 
-.p-pagination {
+.wp-pagenavi {
     display: flex;
     justify-content: space-around;
     align-items: center;
     @include tab {
         justify-content: center;
+        padding-right: 4%;
     }
-
-    &__current {
+    .current {
+        color: $color-white-font;
+        background: $color-brown-dark;
+    }
+    
+    .pages,
+    .page,
+    .current {
         display: none;
         @include tab {
             display: block;
-            padding-right: 4%;
         }
     }
+    .pages {
+        padding-right: 20px;
+    }
     
-    &__next {
-        display: flex;
-        align-items: center;
-
-        & p {
+    .page,
+    .current {
+        margin: 0 5px;
+        padding: 1rem 1rem;
+        border: 1px solid $color-gray;
+        text-decoration: none;
+        line-height: 1;
+        @include tab {
+            margin: 0 10px;
+            display: block;
+        }
+    }
+    .previouspostslink {
+        padding-right: 20px;
+        letter-spacing: -5px;
+        &::after {
+            content: "前へ";
+            padding-left: 20px;
+            letter-spacing: normal;
             @include tab {
                 display: none;
             }
         }
     }
     
-    &__list {
-        margin: 0;
-        padding: 0;
-        display: flex;
-
-        & li {
-            margin: 0 5px;
-            @include pc {
-                margin: 0 10px;
-            }
-        }
-        & a {
-            display: none;
-            padding: 1rem 1rem;
-            border: 1px solid $color-gray;
-            text-decoration: none;
-            line-height: 1;
+    .nextpostslink{
+        padding-left: 20px;
+        letter-spacing: -5px;
+        &::before {
+            content: "次へ";
+            padding-right: 20px;
+            letter-spacing: normal;
             @include tab {
-                display: block;
+                display: none;
             }
         }
     }
 }
-
-
-
+    

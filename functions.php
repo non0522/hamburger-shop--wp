@@ -67,5 +67,3 @@
         update_term_meta($_POST['tag_ID'],'category_subtitle', $_POST['category_subtitle']);
     };
     add_action ( 'edited_term', 'save_category');
-
-

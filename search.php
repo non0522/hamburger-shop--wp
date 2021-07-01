@@ -1,13 +1,12 @@
 <?php get_header(); ?>
         
         <main class="l-main u-mb-m">
-            <section class="p-top p-top--archive">
+            <section class="p-top p-top--search">
                 <div class="p-top__bg">
-                    <h2 class="p-top__title">Menu:</h2>
+                    <h2 class="p-top__title">Search:</h2>
                     <p class="p-top__sub-title"><?php echo esc_html( single_term_title( '', false ) ); ?></p>
                 </div>
             </section><!-- /.p-top -->
-
             <section class="p-menu u-mb-s">
                 <article class="p-menu__desc">
                     <h2 class="p-menu__desc__title"><?php echo esc_html( single_term_title( '', false ) ); ?></h2>
