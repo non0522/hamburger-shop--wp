@@ -10,16 +10,17 @@
             </section><!-- /.p-top -->
 
             <section class="p-contents">
-            <?php
-				if( have_posts() ) :
-					while( have_posts() ) :
-						the_post();
-						the_content();
-					endwhile;
-                else: 
-            ?>
-            <p>表示できる記事がありません。</p>
-			<?php endif; ?>
+                <h2><?php the_title(); ?></h2>
+                <?php
+                    if( have_posts() ) :
+                        while( have_posts() ) :
+                            the_post();
+                            the_content();
+                        endwhile;
+                    else: 
+                ?>
+                <p>表示できる記事がありません。</p>
+                <?php endif; ?>
             </section><!-- /.p-contents -->
         </main> 
         

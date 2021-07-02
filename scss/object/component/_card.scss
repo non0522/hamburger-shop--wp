@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: $color-brown-dark;
     @include tab {
         flex-direction: row;
     }
@@ -19,21 +20,18 @@
 
     &__content {
         padding: 20px;
-        background-color: $color-brown-dark;
+
         color: $color-white-font;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         @include tab {
             width: 50%;
-            // padding: 30px 35px;
             padding: 5% 3%;
         }
         @include pc {
-            // padding: 55px 65px;
         }
         &__title {
-            font-size: 1.25rem;
             padding-bottom: 20px;
             @include pc {
                 font-size: 2.25rem;
@@ -45,6 +43,9 @@
             @include pc {
                 font-size: 1.5rem;
             }
+        }
+        h2 {
+            font-size: 1.5rem;
         }
         > p {
             color: $color-white-font;

@@ -1,5 +1,6 @@
 <form class="p-header__search" id="searchform" method="get" action="<?php echo home_url('/'); ?>">
-    <input class="p-header__search__box" placeholder="&#xf002;" name="s" id="s">
+    <i class="c-search__icon fas fa-search"></i>
+    <input class="p-header__search__box" type="text" placeholder="検索" name="s" id="s">
     <input class="c-button--search" id="searchsubmit" type="submit" value="検索">
 </form>
 
