@@ -1,4 +1,4 @@
-<form class="p-header__search" id="searchform" method="get" action="<?php echo home_url('/'); ?>">
+<form class="p-header__search" id="searchform" method="get" action="<?php echo esc_url('/'); ?>">
     <i class="c-search__icon fas fa-search"></i>
     <input class="p-header__search__box" type="text" placeholder="検索" name="s" id="s">
     <input class="c-button--search" id="searchsubmit" type="submit" value="検索">

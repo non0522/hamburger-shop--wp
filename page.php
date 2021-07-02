@@ -11,7 +11,9 @@
 				if( have_posts() ) :
 					while( have_posts() ) :
 						the_post();
-						the_content();
+						the_content(); ?>
+                            <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>></section>
+                        <?php
 					endwhile;
                 else: 
             ?>

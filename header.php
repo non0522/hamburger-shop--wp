@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="世界一のハンバーガーがニュージーランドより初上陸！ビーフ１００％の新鮮でジューシーなパティとカリカリバンズをお楽しみください！">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/common/ico/favicon.ico">
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
     <section class="l-container">        
         <header class="l-header p-header">
             <h1 class="p-header__title">

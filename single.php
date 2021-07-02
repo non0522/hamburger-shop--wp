@@ -15,13 +15,18 @@
                     if( have_posts() ) :
                         while( have_posts() ) :
                             the_post();
-                            the_content();
+                            the_content(); ?>
+                                <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>></section>
+                            <?php    
                         endwhile;
                     else: 
                 ?>
                 <p>表示できる記事がありません。</p>
                 <?php endif; ?>
             </section><!-- /.p-contents -->
+            <div class="page-links">
+                <?php wp_link_pages(); // 記事内ページャー ?>
+            </div>
         </main> 
         
 <?php get_sidebar(); ?>

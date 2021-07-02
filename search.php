@@ -17,15 +17,17 @@
                         if( have_posts() ) :
                             while( have_posts() ) :
                                 the_post(); ?>
-                                    <figure class="p-menu__list__items c-card">
-                                        <div class="c-card__img"><?php the_post_thumbnail(); ?></div>
-                                        <figcaption class="c-card__content">
-                                            <h2 class="c-card__content__title"><?php the_title();?></h2>
-                                            <!-- <p class="c-card__content__subtitle"></p> -->
-                                            <p class="c-card__content__text"><?php the_excerpt(); ?></p>
-                                            <a href="<?php the_permalink(); ?>" class="c-button--detail u-mtb-s">詳しく見る</a>
-                                        </figcaption>
-                                    </figure>
+                                    <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                        <figure class="p-menu__list__items c-card">
+                                            <div class="c-card__img"><?php the_post_thumbnail(); ?></div>
+                                            <figcaption class="c-card__content">
+                                                <h2 class="c-card__content__title"><?php the_title();?></h2>
+                                                <!-- <p class="c-card__content__subtitle"></p> -->
+                                                <p class="c-card__content__text"><?php the_excerpt(); ?></p>
+                                                <a href="<?php the_permalink(); ?>" class="c-button--detail u-mtb-s">詳しく見る</a>
+                                            </figcaption>
+                                        </figure>
+                                    </section>
                                 <?php
                             endwhile;
                         else:?><p>表示できる記事がありません。</p>

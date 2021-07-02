@@ -7,7 +7,7 @@
             'gallery',
             'caption',
         ));
-        add_theme_support('menus');
+        // add_theme_support('menus');
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
         add_theme_support('automatic-feed-links');
@@ -67,3 +67,9 @@
         update_term_meta($_POST['tag_ID'],'category_subtitle', $_POST['category_subtitle']);
     };
     add_action ( 'edited_term', 'save_category');
+
+
+    function rhamburger_load_theme_textdomain() {
+        load_theme_textdomain( 'rhamburger', get_template_directory() . '/languages' );
+    }
+    add_action( 'after_setup_theme', 'rhamburger_load_theme_textdomain' );
